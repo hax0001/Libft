@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 15:56:21 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/03 21:48:40 by nait-bou         ###   ########.fr       */
+/*   Created: 2023/11/03 20:32:53 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/11/03 21:42:56 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-char	*ft_strchr(const char *s, int c)
+int	ft_atoi(const char *str)
 {
-	while (*s)
+	int	i;
+	int	j;
+	int	r;
+
+	i = 0;
+	j = 1;
+	r = 0;
+	if (str[i] >= 48 && str[i] <= 57 || str[i] == '+' || str[i] == '-')
 	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		if (str[i] == '-')
+		{
+			j = (-1);
+			i++;
+		}
+		while (str[i] != '\0' && str[i] >= 48 && str[i] <= 57)
+		{
+			r = (r * 10) + str[i] - 48;
+			i++;
+		}
+		return (r * j);
 	}
-	if ((char c) == '\0')
-		return ((char *)s);
 	else
-		return (NULL);
-}
+		return (0);
+}	
