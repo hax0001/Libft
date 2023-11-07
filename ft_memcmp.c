@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 20:32:53 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/07 09:48:53 by nait-bou         ###   ########.fr       */
+/*   Created: 2023/11/06 11:22:32 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/11/07 09:27:58 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	j;
-	int	r;
+#include <stddef.h>
 
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	const unsigned char	*v1;
+	const unsigned char	*v2;
+	int					i;
+
+	v1 = (const unsigned char *)s1;
+	v2 = (const unsigned char *)s2;
 	i = 0;
-	j = 1;
-	r = 0;
-	if (str[i] >= 48 && str[i] <= 57 || str[i] == '+' || str[i] == '-')
+	while (i < (int)n)
 	{
-		if (str[i] == '-')
+		if (v1[i] != v2[i])
 		{
-			j = (-1);
-			i++;
+			return ((int)v1[i] - (int)v2[i]);
 		}
-		while (str[i] != '\0' && str[i] >= 48 && str[i] <= 57)
-		{
-			r = (r * 10) + str[i] - 48;
-			i++;
-		}
-		return (r * j);
+		i++;
 	}
-	else
-		return (0);
+	return (0);
 }

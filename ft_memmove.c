@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 20:32:53 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/07 09:48:53 by nait-bou         ###   ########.fr       */
+/*   Created: 2023/11/07 08:52:19 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/11/07 10:16:15 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	j;
-	int	r;
+#include <stddef.h>
 
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char		*d;
+	const unsigned char	*s;
+	int					i;
+	int					t;
+
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
 	i = 0;
-	j = 1;
-	r = 0;
-	if (str[i] >= 48 && str[i] <= 57 || str[i] == '+' || str[i] == '-')
+	t = (int)n;
+	if (d > s)
 	{
-		if (str[i] == '-')
+		while (t-- > 0)
 		{
-			j = (-1);
-			i++;
+			d[t] = (unsigned char)s[t];
 		}
-		while (str[i] != '\0' && str[i] >= 48 && str[i] <= 57)
-		{
-			r = (r * 10) + str[i] - 48;
-			i++;
-		}
-		return (r * j);
 	}
 	else
-		return (0);
+	{
+		while (i < (int)n)
+		{
+			d[i] = (unsigned char)s[i];
+			i++;
+		}
+	}
+	return (dest);
 }

@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 20:32:53 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/07 09:48:53 by nait-bou         ###   ########.fr       */
+/*   Created: 2023/11/04 10:25:04 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/11/04 12:23:40 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+#include <stddef.h>
+
+size_t	strlcat(char *dst, const char *src, size_t size)
 {
 	int	i;
 	int	j;
-	int	r;
 
 	i = 0;
-	j = 1;
-	r = 0;
-	if (str[i] >= 48 && str[i] <= 57 || str[i] == '+' || str[i] == '-')
+	j = 0;
+	while (dst[i] && i < (int)size - 1)
+		i++;
+	while (src[j] != '\0' && i + j < (int)(size - 1))
 	{
-		if (str[i] == '-')
-		{
-			j = (-1);
-			i++;
-		}
-		while (str[i] != '\0' && str[i] >= 48 && str[i] <= 57)
-		{
-			r = (r * 10) + str[i] - 48;
-			i++;
-		}
-		return (r * j);
+		dst[i + j] = src[j];
+		j++;
 	}
-	else
-		return (0);
+	dst[i] = '\0';
+	while (src[j])
+	{
+		j++;
+	}
+	return ((size_t)i + j);
 }
