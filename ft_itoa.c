@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 13:22:46 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/12 18:38:49 by nait-bou         ###   ########.fr       */
+/*   Created: 2023/11/12 16:57:19 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/11/12 22:07:27 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+int	nlen(int n)
 {
-    char    *d;
-	if (!s)
-		return(0);
-    d = malloc(len + 1);
-    if (!d)
-        return (0);
-   ft_strlcpy(d,s + start,len + 1);
-    return (d);
+	int	len;
+
+	int = 0;
+	while(n != 0)
+	{
+		n %= 10
+	}
 }
-int main()
+
+char	*ft_itoa(int n)
 {
-  char const *l = "noureddin";  
-  char *res = ft_substr(l,2,6);
-  if (!res)
-	printf("nuuuul");
-  else
-	printf("%s",res);
+	char	*s;
+	unsigned int	len;
+	
+	len = nlen(n);
 }

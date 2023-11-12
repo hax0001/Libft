@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:50:32 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/11 23:00:22 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/11 23:16:09 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ char	*ft_strrchr(const char *s, int c)
 int main()
 {
 	const char *j ="aymenekajjou";
-	int p = 'e';
+	int p = 'u';
 	char *r = ft_strrchr( j, p);
-	printf("res : %d ",r - j);
+	printf("res : %ld ",r - j);
 
 
 }

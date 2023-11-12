@@ -6,13 +6,14 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:07:02 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/11 21:28:14 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/12 22:47:16 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 
 int	*place(char **strings3, int *string_index, int *j, char *buffer)
 {
@@ -106,6 +107,8 @@ char	**ft_split(char const *s, char c)
 	char	**strings;
 
 	count = 0;
+	if (!*s)
+		return (NULL);
 	check(s, c, &count);
 	strings = (char **)malloc(sizeof(char *) * (count + 1));
 	strings = mouves(s, c, strings);
@@ -118,9 +121,13 @@ char	**ft_split(char const *s, char c)
 #include <stdlib.h>
 
 int main() {
-    const char s[] = "To be, or not to be, that is the question.";
-    char t = ' ';
+    const char s[] = "q.w.e.r.t.y..u.i.o.p....as.d.sf.j.hjvfdc.v.v.x............................................................................................";
+    char t = '.';
+	
     char **result = ft_split(s, t);
+	if (!result)
+		return (0);
+		else
     for (int i = 0; result[i] != NULL; i++) {
         printf("%s\n", result[i]);
     }
