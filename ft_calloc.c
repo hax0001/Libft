@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:04:29 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/11 20:37:11 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:10:24 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	int		i;
 	char	*d;
 
-	
 	i = 0;
-	d =  (void *)malloc(nmemb * size);
+	d = (void *)malloc(nmemb * size);
 	if (!d)
 		return (NULL);
 	while ((size_t)i < (nmemb * size))

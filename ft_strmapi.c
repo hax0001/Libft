@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 13:22:46 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/13 12:26:06 by nait-bou         ###   ########.fr       */
+/*   Created: 2023/11/13 13:22:18 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/11/13 14:08:02 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*d;
+	int		len;
+	int		i;
 
-	if (!s)
-		return (0);
-	d = malloc(len + 1);
+	len = ft_strlen(s);
+	i = 0;
+	d = (char *)malloc(sizeof(char) * (len + 1));
 	if (!d)
-		return (0);
-	ft_strlcpy(d, s + start, len + 1);
+		return (NULL);
+	while (s)
+	{
+		d[i] = f(i, s[i]);
+		i++;
+	}
+	d[i] = '\0';
 	return (d);
 }

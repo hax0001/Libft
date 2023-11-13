@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:07:02 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/12 22:47:16 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:31:16 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,27 +113,4 @@ char	**ft_split(char const *s, char c)
 	strings = (char **)malloc(sizeof(char *) * (count + 1));
 	strings = mouves(s, c, strings);
 	return (strings);
-}
-
-
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() {
-    const char s[] = "q.w.e.r.t.y..u.i.o.p....as.d.sf.j.hjvfdc.v.v.x............................................................................................";
-    char t = '.';
-	
-    char **result = ft_split(s, t);
-	if (!result)
-		return (0);
-		else
-    for (int i = 0; result[i] != NULL; i++) {
-        printf("%s\n", result[i]);
-    }
-    for (int i = 0; result[i] != NULL; i++) {
-        free(result[i]);
-    }
-    free(result);
-    return 0;
 }
