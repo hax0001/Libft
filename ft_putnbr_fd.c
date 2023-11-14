@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 15:34:23 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/14 10:15:42 by nait-bou         ###   ########.fr       */
+/*   Created: 2023/11/14 13:25:03 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/11/14 15:23:15 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+#include <unistd.h>
+#include "libft.h"
+
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	char	*c;
+	int		i;
 
 	i = 0;
-	while (s)
-	{
-		f(i, &s[i]);
-		i++;
-	}
+	c = ft_itoa(n);
+	while (c[i])
+		write(fd, &c[i++], sizeof(char));
 }
