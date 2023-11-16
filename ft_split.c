@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:07:02 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/13 11:31:16 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/14 23:37:45 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,8 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	check(s, c, &count);
 	strings = (char **)malloc(sizeof(char *) * (count + 1));
+	if (!*strings)
+		return (NULL);
 	strings = mouves(s, c, strings);
 	return (strings);
 }

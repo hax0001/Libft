@@ -6,17 +6,15 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:32:59 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/09 20:00:16 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:17:28 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalnum(int i)
 {
-	if ((i >= 0 && i <= 9) || (i >= 65 && i <= 90)
-		|| (i >= 97 && i <= 122))
+	if (ft_isalpha(i) == 1 || ft_isdigit(i) == 1)
 	{
 		return (1);
 	}

@@ -6,12 +6,9 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:56:17 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/09 19:12:40 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/15 12:37:04 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_isalpha(int i)
 {

@@ -6,22 +6,13 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 08:37:51 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/07 09:43:21 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:40:59 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*v;
-	int		i;
-
-	v = s;
-	i = 0;
-	while (i < (int)n)
-	{
-		v[i] = '\0';
-		i++;
-	}
+	ft_memset(s, '\0', n);
 }
