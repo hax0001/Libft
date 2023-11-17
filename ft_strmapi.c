@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:22:18 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/13 14:08:02 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/17 01:50:46 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	d = (char *)malloc(sizeof(char) * (len + 1));
 	if (!d)
 		return (NULL);
-	while (s)
+	while (s[i])
 	{
 		d[i] = f(i, s[i]);
 		i++;
