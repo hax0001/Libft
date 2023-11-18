@@ -45,4 +45,5 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	*ft_itoa(int n);
 
+
 #endif

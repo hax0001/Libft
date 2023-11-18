@@ -19,11 +19,11 @@ int	*place(char **strings3, int *string_index, int *j, char *buffer)
 	if (*j > 0)
 	{
 		buffer[*j] = '\0';
-		to_allocate = sizeof(char) * (strlen(buffer) + 1);
+		to_allocate = sizeof(char) * (ft_strlen(buffer) + 1);
 		strings3[*string_index] = malloc(to_allocate);
 		if (!strings3[*string_index])
 			return (0);
-		ft_strlcpy(strings3[*string_index], buffer);
+		ft_memcpy(strings3[*string_index], buffer, sizeof(buffer) + 1);
 		*string_index += 1;
 		*j = 0;
 	}
