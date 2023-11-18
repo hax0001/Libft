@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:34:23 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/18 04:59:29 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:50:01 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int	i;
 
 	i = 0;
-	while (s)
+	while (s[i] != '\0')
 	{
 		f(i, &s[i]);
 		i++;
