@@ -6,11 +6,14 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:07:02 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/18 04:59:02 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 21:35:09 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+#include <stdio.h>
+#include <stdlib.h>
 
 int	*place(char **strings3, int *string_index, int *j, char *buffer)
 {
@@ -25,7 +28,6 @@ int	*place(char **strings3, int *string_index, int *j, char *buffer)
 			return (0);
 		ft_memcpy(strings3[*string_index], buffer, sizeof(buffer) + 1);
 		*string_index += 1;
-		*j = 0;
 	}
 	return (string_index);
 }
@@ -43,12 +45,12 @@ int	*check1(char const *s, char c, char *buffer, char **strings2)
 	len = ft_strlen(s);
 	while (i < len)
 	{
-		if ((char)s[i] == c)
+		if (s[i] == c)
 			i++;
 		j = 0;
 		while (i < len)
 		{
-			if ((char)s[i] == c)
+			if (s[i] == c)
 				break ;
 			buffer[j++] = s[i++];
 		}
@@ -68,12 +70,12 @@ void	check(char const *s, char c, int *count)
 	len = ft_strlen(s);
 	while (i < len)
 	{
-		if ((char)s[i] == c)
+		if (s[i] == c)
 			i++;
 		old_i = i;
 		while (i < len)
 		{
-			if ((char)s[i] == c)
+			if (s[i] == c)
 				break ;
 			i++;
 		}
