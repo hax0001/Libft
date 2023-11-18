@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:07:02 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/17 02:01:29 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 03:27:01 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,6 @@ void	check(char const *s, char c, int *count)
 	}
 }
 
-
-
 char	**mouves(char const *s, char c, char **strings1)
 {
 	int		*r;
@@ -118,59 +116,3 @@ char	**ft_split(char const *s, char c)
 	strings = mouves(s, c, strings);
 	return (strings);
 }
-
-
-
-
-
-
-#include <stdio.h>
-#include <stdlib.h>
-
-// Assuming ft_split is declared and defined
-char	**ft_split(char const *s, char c);
-
-// Function to free the memory allocated for the array of strings
-void	free_split_result(char **split_result)
-{
-	int i;
-
-	i = 0;
-	while (split_result[i])
-	{
-		free(split_result[i]);
-		i++;
-	}
-	free(split_result);
-}
-
-int main(void)
-{
-	char *input_string = "aymedfgdg  dssgd";
-	char delimiter = '0';
-	char **result;
-
-	// Using ft_split to split the string
-	result = ft_split(input_string, delimiter);
-
-	if (!result)
-	{
-		// Handle memory allocation failure
-		fprintf(stderr, "Memory allocation error\n");
-		return 1;
-	}
-
-	// Printing the result
-	int i = 0;
-	while (result[i])
-	{
-		printf("Token %d: %s\n", i + 1, result[i]);
-		i++;
-	}
-
-	// Freeing the allocated memory
-	free_split_result(result);
-
-	return 0;
-}
-

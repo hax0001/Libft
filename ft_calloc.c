@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:04:29 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/18 01:59:35 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 03:25:19 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*d;
 	size_t	tot;
-	
-	if (size != 0  && nmemb > SIZE_MAX / size)
+
+	if (size != 0 && nmemb > SIZE_MAX / size)
 		return (NULL);
 	tot = nmemb * size;
 	d = malloc(tot);

@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:40:23 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/17 17:28:08 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 03:20:54 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char		*d;
 	const char	*s;
 	size_t		i;
-	
+
 	d = (char *)dest;
 	s = (const char *)src;
 	i = 0;
@@ -28,4 +28,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-

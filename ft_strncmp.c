@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:47:41 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/18 01:57:54 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 03:21:27 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t			i;
 	unsigned char	*v1;
 	unsigned char	*v2;
-	
 
 	i = 0;
 	v1 = (unsigned char *)s1;
