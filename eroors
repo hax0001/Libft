@@ -1,0 +1,279 @@
+✔ Preparing framework
+✔ Executing: norminette
+✔ Executing: make fclean all (no bonus)
+ℹ Executing: libft-war-machine (https://github.com/y3ll0w42/libft-war-machine)
+--------------------------------------------------------------------------------
+|                              COMPILING LIBFT                                 |
+--------------------------------------------------------------------------------
+rules:
+all        $(NAME)       fclean       re           clean       bonus     libft.a
+ok         ok            ok           ok           ok          missing   found
+
+FUNCTION         TESTS                RESULT
+ft_isalpha       ✓✓✓✓✓✓✓              OK
+ft_isdigit       ✓✓✓✓✓✓✓              OK
+ft_isalnum       ✓✓✓✓✓✓✓              OK
+ft_isascii       ✓✓✓✓✓✓✓✓             OK
+ft_isprint       ✓✓✓✓✓✓✓              OK
+ft_strlen        ✓✓✓✓✓✓               OK
+ft_memset        ✓✓✓✓                 OK
+ft_bzero         ✓✓                   OK
+ft_memcpy        ✓✓✓                  OK
+ft_memmove       ✓✓✓✓✓                OK
+ft_strlcpy       ✓✓✓✓✓                OK
+ft_strlcat       ✓✓✓✓✓✓✓✓✓            OK
+ft_toupper       ✓✓✓✓✓✓✓              OK
+ft_tolower       ✓✓✓✓✓✓✓              OK
+ft_strchr        ✓✓✓✓✓✓               OK
+ft_strrchr       ✓✓✓✓✓✓✓✓             OK
+ft_strncmp       ✓✓✓✓✓✓✓✓✓✓✓          OK
+ft_memchr        ✓✓✓✓✓✓               OK
+ft_memcmp        ✓✓✓✓✓✓✓✓✓            OK
+ft_strnstr       ✓✓✓✓✓✓✓✓✓✓           OK
+ft_atoi          ✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓  OK
+ft_calloc        ✓                    OK
+ft_strdup        ✓                    OK
+ft_substr        ✓✓✓✓✗                KO
+ft_strjoin       AAAA                 KO
+ft_strtrim       ✓✓✓✓✓                OK
+ft_split         A✗✗✗A✗               KO
+ft_itoa          ✓✓✓✓✓✓✓✓✓✓           OK
+ft_strmapi       ✓                    OK
+ft_striteri      A                    KO
+ft_putchar_fd    ✓✓✓✓✓✓✓              OK
+ft_putstr_fd     ✓✓✓✓                 OK
+ft_putendl_fd    ✓✓✓✓                 OK
+ft_putnbr_fd     ✓✓✓✓✓✓✓✓✓            OK
+
+Abort: A  Bus error: B  Segmentation fault: S  Timeout: T
+
+More information in: /Users/nait-bou/francinette/temp/libft/war-machine/deepthought
+
+Errors in substr: /Users/nait-bou/francinette/temp/libft/war-machine/tests/Part2_functions/ft_substr
+Test 5:
+    char *bullshit;
+    if (!(strsub = ft_substr(str, 400, 20)))
+        ft_print_result("NULL");
+    else
+    {
+        bullshit = (char *)&strsub[30];
+        bullshit = "FULL BULLSHIT";
+        if (strsub)
+            ft_print_result(strsub);
+        else
+            ft_print_result("rip");
+    }
+    if (str == strsub)
+        ft_print_result("\nA new string was not returned");
+    (void)bullshit;
+Expected (cat -e test05.output):
+
+Your result (cat -e user_output_test05):
+}\xfc\xa6\xe6\xfe^?
+Errors in strjoin: /Users/nait-bou/francinette/temp/libft/war-machine/tests/Part2_functions/ft_strjoin
+Test 1:
+    if (!(strjoin = ft_strjoin(s1, s2)))
+        ft_print_result("NULL");
+    else
+        ft_print_result(strjoin);
+    if (strjoin == s1 || strjoin == s2)
+        ft_print_result("\nA new string was not returned");
+Expected (cat -e test01.output):
+lorem ipsumdolor sit amet
+Your result (cat -e user_output_test01):
+
+Test 2:
+    s1[0] = '\0';
+    if (!(strjoin = ft_strjoin(s1, s2)))
+        ft_print_result("NULL");
+    else
+        ft_print_result(strjoin);
+    if (strjoin == s1 || strjoin == s2)
+        ft_print_result("\nA new string was not returned");
+Expected (cat -e test02.output):
+dolor sit amet
+Your result (cat -e user_output_test02):
+
+Test 3:
+    s2[0] = '\0';
+    if (!(strjoin = ft_strjoin(s1, s2)))
+        ft_print_result("NULL");
+    else
+...
+
+File too large. To see full report open: /Users/nait-bou/francinette/temp/libft/war-machine/errors.log
+
+✔ Compiling tests: libftTester (https://github.com/Tripouille/libftTester)
+ℹ Testing:
+ft_isalpha	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK
+ft_isdigit	: 1.OK 2.OK 3.OK 4.OK
+ft_isalnum	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK
+ft_isascii	: 1.OK 2.OK 3.OK 4.OK
+ft_isprint	: 1.OK 2.OK 3.OK 4.OK
+ft_strlen	: 1.OK 2.OK
+ft_memset	: 1.OK 2.OK
+ft_bzero	: 1.OK 2.OK 3.OK
+ft_memcpy	: 1.OK 2.OK 3.OK
+ft_memmove	: 1.OK 2.OK 3.OK 4.OK
+ft_strlcpy	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK
+ft_strlcat	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK
+ft_toupper	: 1.OK 2.OK 3.OK 4.OK
+ft_tolower	: 1.OK 2.OK 3.OK 4.OK
+ft_strchr	: 1.OK 2.OK 3.OK 4.OK 5.OK
+ft_strrchr	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK
+ft_strncmp	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK
+ft_memchr	: 1.OK 2.OK 3.OK 4.OK 5.OK
+ft_memcmp	: 1.OK 2.OK 3.OK 4.OK 5.KO
+ft_strnstr	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK
+ft_atoi		: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK
+ft_calloc	: 1.OK 2.MOK
+ft_strdup	: 1.OK 2.MOK 3.OK 4.MOK
+ft_substr	: 1.OK 2.MKO 3.OK 4.MOK 5.KO 6.MOK 7.OK 8.MKO 9.OK 10.MOK 11.OK 12.MOK 13.OK 14.MOK 15.OK 16.MOK
+ft_strjoin	: 1.OK 2.MOK 3.KO 4.MOK 5.KO 6.MOK 7.KO 8.MOK
+ft_strtrim	: 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.OK 8.MOK 9.OK 10.MOK 11.OK 12.MOK 13.OK 14.MOK 15.OK 16.MOK
+ft_itoa		: 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.OK 8.MOK 9.OK 10.MOK 11.OK 12.MOK
+ft_strmapi	: 1.OK 2.MOK 3.OK 4.MOK
+ft_putchar_fd	: 1.OK
+ft_putstr_fd	: 1.OK
+ft_putendl_fd	: 1.OK
+ft_putnbr_fd	: 1.OK LEAKS.KO [0x7f8fe0500000 : 2] 2.OK LEAKS.KO [0x7f8fe0500020 : 3] 3.OK LEAKS.KO [0x7f8fe0500030 : 11] 4.OK LEAKS.KO [0x7f8fe0500040 : 12] 5.OK LEAKS.KO [0x7f8fe0500050 : 4]
+
+MKO: test about your malloc size (this shouldn't be tested by moulinette)
+
+Errors in:
+
+For /Users/nait-bou/francinette/tests/libft/Tripouille/tests/ft_memcmp_test.cpp:
+KO  26: 	/* 5 */ check(ft_memcmp(s2, s3, 4) != 0); showLeaks();
+
+For /Users/nait-bou/francinette/tests/libft/Tripouille/tests/ft_substr_test.cpp:
+MKO 20: 	/* 2 */ mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
+KO  27: 	/* 5 */ check(!strcmp(s, ""));
+MKO 33: 	/* 8 */ mcheck(s, 1); free(s); free(str); showLeaks();
+
+For /Users/nait-bou/francinette/tests/libft/Tripouille/tests/ft_strjoin_test.cpp:
+KO  23: 	/* 3 */ check(!strcmp(s, "42"));
+KO  27: 	/* 5 */ check(!strcmp(s, "42"));
+KO  31: 	/* 7 */ check(!strcmp(s, ""));
+
+For /Users/nait-bou/francinette/tests/libft/Tripouille/tests/ft_split_test.cpp:
+KO  28: 	/* 2 */ check(!strcmp(tab[0], "tripouille"));
+KO  34: 	/* 6 */ check(tab[2] == NULL);
+
+✖ Compiling tests: libft-unit-test (https://github.com/alelievr/libft-unit-test)
+duplicate symbol '_ft_putchar_fd' in:
+    assets/tmp/ft_putchar_fd.o
+    assets/tmp/ft_putstr_fd.o
+duplicate symbol '_ft_putchar_fd' in:
+    assets/tmp/ft_putchar_fd.o
+    assets/tmp/ft_putendl_fd.o
+ld: 2 duplicate symbols for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [libft.so] Error 1
+
+Problem compiling tests
+✔ Compiling tests: fsoares (my own)
+ℹ Testing:
+ft_isalpha      : OK
+ft_isdigit      : OK
+ft_isalnum      : OK
+ft_isascii      : OK
+ft_isprint      : OK
+ft_strlen       : OK
+ft_memset       : OK
+ft_bzero        : OK
+ft_memcpy       : OK
+ft_memmove      : OK
+ft_strlcpy      : OK
+ft_strlcat      : OK
+ft_toupper      : OK
+ft_tolower      : OK
+ft_strchr       : KO
+ft_strrchr      : KO
+ft_strncmp      : OK
+ft_memchr       : OK
+ft_memcmp       : KO
+ft_strnstr      : OK
+ft_atoi         : OK
+ft_calloc       : OK
+ft_strdup       : OK
+ft_substr       : 3.KO Abort
+ft_strjoin      : 1.KO Abort
+ft_strtrim      : 1.KO Abort
+ft_split        : 1.KO Abort
+ft_itoa         : OK
+ft_strmapi      : OK
+ft_striteri     : 1.KO Abort
+ft_putchar_fd   : OK
+ft_putstr_fd    : OK
+ft_putendl_fd   : OK
+ft_putnbr_fd    : KO
+
+Errors found:
+For ft_strchr, in /Users/nait-bou/francinette/tests/libft/fsoares/test_strchr.c:
+
+Error in test 6: ft_strchr(0x10ad58a40: "teste", 1024: '\0'): expected:
+0x10ad58a45, yours: 0x0
+
+For ft_strrchr, in
+/Users/nait-bou/francinette/tests/libft/fsoares/test_strrchr.c:
+
+Error in test 6: ft_strrchr(0x1091e59c0: "teste", 1024: '\0'): expected:
+0x1091e59c5, yours: 0x0
+
+For ft_memcmp, in /Users/nait-bou/francinette/tests/libft/fsoares/test_memcmp.c:
+
+Error in test 9: ft_memcmp("abc", "abc", 7):
+expected sign: -1 (value: -19), yours sign: 0 (value: 0)
+
+You are stoping at the '\0'
+
+For ft_substr, in /Users/nait-bou/francinette/tests/libft/fsoares/test_substr.c:
+
+Error in test 3: ft_substr("", 1, 1): Memory problems!
+     in sigabort utils.c:58:1
+     in ft_strlcpy ft_strlcpy.c:22:10
+     in ft_substr ft_substr.c:25:10
+     in test_single_substr test_substr.c:7:2
+     in test_substr test_substr.c:15:8
+     in main test_substr.c:43:2
+
+=================================================================
+==5828==ERROR: AddressSanitizer: global-buffer-overflow on address
+0x0001055b6e21 at pc 0x0001055b508b bp 0x7ffeea6527f0 sp 0x7ffeea6527e8
+READ of size 1 at 0x0001055b6e21 thread T0
+    #0 0x1055b508a in ft_strlcpy ft_strlcpy.c:22
+    #1 0x1055b5304 in ft_substr ft_substr.c:24
+    #2 0x1055ae93f in test_single_substr test_substr.c:7
+    #3 0x1055aeaa3 in test_substr test_substr.c:15
+    #4 0x1055af10d in main test_substr.c:43
+    #5 0x7fff795203d4 in start (libdyld.dylib:x86_64+0x163d4)
+
+0x0001055b6e21 is located 0 bytes to the right of global variable '<string
+literal>' defined in 'test_substr.c:13:30' (0x1055b6e20) of size 1
+  '<string literal>' is ascii string ''
+SUMMARY: AddressSanitizer: global-buffer-overflow ft_strlcpy.c:22 in ft_strlcpy
+
+For ft_strjoin, in
+/Users/nait-bou/francinette/tests/libft/fsoares/test_strjoin.c:
+
+Error in test 1: ft_strjoin("", ""): Memory problems!
+     in sigabort utils.c:58:1
+     in escape_str utils.c:234:18
+     in same_string utils.c:439:10
+     in test_single_strjoin test_strjoin.c:7:2
+     in test_strjoin test_strjoin.c:13:8
+     in main test_strjoin.c:24:2
+
+=================================================================
+...
+
+File too large. To see full report open:
+/Users/nait-bou/francinette/temp/libft/fsoares/error.log
+
+
+Summary: no bonus
+
+Failed tests: strtrim, putnbr_fd, strjoin, memcmp, striteri, substr, ft_split, strrchr, ft_memcmp, strchr, ft_strjoin, ft_substr, split, libft-unit-test
+
+Passed tests: isalpha, isdigit, isalnum, isascii, isprint, strlen, memset, bzero, memcpy, memmove, strlcpy, strlcat, toupper, tolower, strncmp, memchr, strnstr, atoi, calloc, strdup, itoa, strmapi, putchar_fd, putstr_fd, putendl_fd
+e1r9p12%
