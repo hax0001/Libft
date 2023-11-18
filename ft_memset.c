@@ -6,11 +6,11 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 17:06:39 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/17 16:31:52 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 04:57:19 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

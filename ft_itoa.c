@@ -6,12 +6,11 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:57:19 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/13 11:30:12 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 04:56:36 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
+#include "libft.h"
 
 void	minint(char *s, int *n)
 {

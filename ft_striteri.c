@@ -6,9 +6,11 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:34:23 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/17 22:42:07 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 04:59:29 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

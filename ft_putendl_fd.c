@@ -6,11 +6,11 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:17:19 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/14 13:23:46 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 04:57:29 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

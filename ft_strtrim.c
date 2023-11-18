@@ -6,11 +6,10 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:49:06 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/13 12:07:39 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 05:00:25 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

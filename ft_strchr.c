@@ -6,11 +6,11 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:56:21 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/16 15:43:32 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 04:59:22 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

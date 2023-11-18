@@ -6,14 +6,11 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:07:02 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/18 03:27:01 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 04:59:02 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <stddef.h>
+#include "libft.h"
 
 int	*place(char **strings3, int *string_index, int *j, char *buffer)
 {
@@ -26,7 +23,7 @@ int	*place(char **strings3, int *string_index, int *j, char *buffer)
 		strings3[*string_index] = malloc(to_allocate);
 		if (!strings3[*string_index])
 			return (0);
-		strcpy(strings3[*string_index], buffer);
+		ft_strlcpy(strings3[*string_index], buffer);
 		*string_index += 1;
 		*j = 0;
 	}
@@ -43,7 +40,7 @@ int	*check1(char const *s, char c, char *buffer, char **strings2)
 
 	i = 0;
 	string_index = 0;
-	len = strlen(s);
+	len = ft_strlen(s);
 	while (i < len)
 	{
 		if ((char)s[i] == c)
@@ -68,7 +65,7 @@ void	check(char const *s, char c, int *count)
 
 	i = 0;
 	old_i = 0;
-	len = strlen(s);
+	len = ft_strlen(s);
 	while (i < len)
 	{
 		if ((char)s[i] == c)
@@ -91,7 +88,7 @@ char	**mouves(char const *s, char c, char **strings1)
 	char	*buffer;
 	int		len;
 
-	len = strlen(s);
+	len = ft_strlen(s);
 	buffer = malloc(sizeof(char) * (len + 1));
 	if (!buffer)
 		return (NULL);

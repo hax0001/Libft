@@ -6,11 +6,10 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:22:18 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/17 01:50:46 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 04:59:59 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
