@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 13:25:03 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/14 15:23:15 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/17 22:38:03 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	ft_putnbr_fd(int n, int fd)
 	i = 0;
 	c = ft_itoa(n);
 	while (c[i])
-		write(fd, &c[i++], sizeof(char));
+		write(fd, &c[i++], 1);
 }

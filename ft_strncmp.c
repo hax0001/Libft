@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:47:41 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/16 19:51:38 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 01:57:54 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,24 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*v1;
+	unsigned char	*v2;
+	
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && n != 0 && i < n)
+	v1 = (unsigned char *)s1;
+	v2 = (unsigned char *)s2;
+	while (s1[i] != '\0' && s2[i] != '\0' && i < n)
 	{
-		if (s1[i] == s2[i])
+		if (v1[i] == v2[i])
 			i++;
 		else
-			return (s1[i] - s2[i]);
+			return (v1[i] - v2[i]);
 	}
-	if (s1[i] == '\0' || s2[i] == '\0')
-		return (s1[i] - s2[i]);
+	if ((s1[i] == '\0' || s2[i] == '\0') && i < n)
+	{
+		return (v1[i] - v2[i]);
+	}
 	return (0);
 }

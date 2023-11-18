@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:00:12 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/17 04:26:11 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/18 02:49:10 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,38 +17,55 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < size -1 && i < sizeof(dst) - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
 	if (size > 0)
+	{
+		while (src[i] != '\0' && i < size -1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
 		dst[i] = '\0';
+	}
 	i = 0;
 	while (src[i])
-	{
 		i++;
-	}
 	return (i);
 }
+
+
+
+
+
+
+
 
 
 
 #include <stdio.h>
 #include <string.h>
 
-// Assuming you have the declaration of ft_strlcpy here
-size_t ft_strlcpy(char *dst, const char *src, size_t size);
 
-int main(void) {
-    char src[] = "Hello, World!";
-    char dst[20]; // Adjust the size based on your needs
 
-   
+int main() {
+    // Test strings
+    const char *source = "Hello, World!";
+    char destination[20];
+
+    // Using the standard library's strlcpy for comparison
+    size_t std_result = ft_strlcpy(destination, source, sizeof(destination));
+    printf("Standard strlcpy result: %zu, Destination: %s\n", std_result, destination);
+
     // Using your ft_strlcpy implementation
-    size_t your_result = ft_strlcpy(dst, src, 4);
-    printf("Your ft_strlcpy: %zu, Result: %s\n", your_result, dst);
+    char destination_ft[20];
+    size_t ft_result = ft_strlcpy(destination_ft, source, sizeof(destination_ft));
+    printf("Your ft_strlcpy result: %zu, Destination: %s\n", ft_result, destination_ft);
+
+    // Compare the results
+    if (std_result == ft_result && strcmp(destination, destination_ft) == 0) {
+        printf("Test passed: Results match!\n");
+    } else {
+        printf("Test failed: Results do not match.\n");
+    }
 
     return 0;
 }
-
