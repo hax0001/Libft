@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 09:49:06 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/18 05:00:25 by nait-bou         ###   ########.fr       */
+/*   Created: 2023/11/20 02:11:46 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/11/20 02:12:08 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,21 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	char	*p;
+	char	*new_str;
+	size_t	s1_len;
+	size_t	i;
+	size_t	j;
 
-	p = NULL;
-	if (s1 != 0 && set != 0)
-	{
-		i = 0;
-		j = ft_strlen(s1);
-		while (s1[i] && ft_strchr(set, s1[i]))
-			i++;
-		while (s1[j - 1] && ft_strchr(set, s1[j - 1]) && j > i)
-			j--;
-		p = malloc(j - i + 1);
-		if (p)
-			ft_strlcpy(p, &s1[i], j - i + 1);
-	}
-	return (p);
+	s1_len = ft_strlen(s1);
+	i = 0;
+	j = s1_len;
+	while (s1[i] != '\0' && ft_strchr(set, s1[i]) != NULL)
+		i++;
+	while (i < j && ft_strchr(set, s1[j]) != NULL)
+		j--;
+	new_str = (char *)malloc((j - i + 2) * sizeof(char));
+	if (!new_str)
+		return (NULL);
+	ft_strlcpy(new_str, s1 + i, j - i + 2);
+	return (new_str);
 }

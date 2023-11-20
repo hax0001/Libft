@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 01:53:50 by akajjou           #+#    #+#             */
-/*   Updated: 2023/11/19 03:25:55 by akajjou          ###   ########.fr       */
+/*   Created: 2023/11/20 02:12:28 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/11/20 02:12:36 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,9 +96,9 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	num_words = ft_count_words(s, c);
 	s2 = (char **)malloc(sizeof(char *) * (num_words + 1));
-	s2[num_words] = NULL;
 	if (!s2)
 		return (0);
+	s2[num_words] = NULL;
 	s2 = ft_split_words(s, c, s2, num_words);
 	return (s2);
 }

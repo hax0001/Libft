@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:50:32 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/18 05:00:18 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/20 00:47:10 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	*t;
+	char		r;
 
 	t = NULL;
+	r = (char)c;
 	while (*s)
 	{
-		if (*s == (const char)c)
+		if (*s == r)
 			t = s;
 		s++;
 	}
-	if (c == '\0')
+	if (r == '\0')
 		t = s;
 	if (t == NULL)
 		return (NULL);

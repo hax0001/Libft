@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 17:06:39 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/18 04:57:19 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/20 00:57:57 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	v = (char *)s;
 	while (i < n)
 	{
