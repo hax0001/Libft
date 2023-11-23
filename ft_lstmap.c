@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 01:57:53 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/23 02:31:32 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/23 03:26:10 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		t = lst -> next;
 		d = (*f)(lst -> content);
-		(*del)(lst -> content);
-		free(lst);
+		
+		ft_lstdelone(lst, del);
 		lst = t;
 	}
 	return (d);
