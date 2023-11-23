@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 11:04:29 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/23 02:37:30 by nait-bou         ###   ########.fr       */
+/*   Created: 2023/11/23 01:57:53 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/11/23 02:31:32 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	void	*d;
-	size_t	tot;
+	size_t	n;
+	t_list	*d;
+	t_list	*t;
 
-	if (size != 0 && nmemb > SIZE_MAX / size)
+	if (!lst || !f || !del)
 		return (NULL);
-	tot = nmemb * size;
-	d = malloc(tot);
+	n = ft_lstsize(lst);
+	d = (t_list *)malloc(sizeof(t_list) * n);
 	if (!d)
 		return (NULL);
-	ft_bzero(d, (nmemb * size));
-	return ((void *)d);
+	t = lst;
+	while (lst)
+	{
+		t = lst -> next;
+		d = (*f)(lst -> content);
+		(*del)(lst -> content);
+		free(lst);
+		lst = t;
+	}
+	return (d);
 }
