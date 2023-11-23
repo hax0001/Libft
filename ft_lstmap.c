@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 01:57:53 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/23 06:37:23 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/23 06:55:25 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,27 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*d;
-	t_list	*t;
+	t_list *new_list;
+	t_list *save;
 
 	if (!lst || !f || !del)
-		return (NULL);
-	d = (t_list *)malloc(sizeof(t_list));
-	if (!d)
-		return (NULL);
-	d -> content = f(lst -> content);
-	t = d;
-	lst = lst -> next;
-	while (lst -> next)
+		return (0);
+	new_list = ft_lstnew(f(lst->content));
+	if (!new_list)
+		return (0);
+	save = new_list;
+	lst = lst->next;
+	while (lst)
 	{
-		t = lst -> next;
-		t -> next = ft_lstnew((*f)(lst -> content));
-		t = t -> next;
-		lst = lst -> next;
+		new_list->next = ft_lstnew(f(lst->content));
+		if (!new_list->next)
+		{
+			ft_lstclear(&save, del);
+			return (0);
+		}
+		new_list = new_list->next;
+		lst = lst->next;
 	}
-	t -> next = NULL;
-	return (d);
+	new_list->next = NULL;
+	return (save);
 }
