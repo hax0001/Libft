@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 01:57:53 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/23 03:26:10 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/23 06:37:23 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	n;
 	t_list	*d;
 	t_list	*t;
 
 	if (!lst || !f || !del)
 		return (NULL);
-	n = ft_lstsize(lst);
-	d = (t_list *)malloc(sizeof(t_list) * n);
+	d = (t_list *)malloc(sizeof(t_list));
 	if (!d)
 		return (NULL);
-	t = lst;
-	while (lst)
+	d -> content = f(lst -> content);
+	t = d;
+	lst = lst -> next;
+	while (lst -> next)
 	{
 		t = lst -> next;
-		d = (*f)(lst -> content);
-		
-		ft_lstdelone(lst, del);
-		lst = t;
+		t -> next = ft_lstnew((*f)(lst -> content));
+		t = t -> next;
+		lst = lst -> next;
 	}
+	t -> next = NULL;
 	return (d);
 }
