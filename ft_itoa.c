@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hax <hax@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:57:19 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/18 04:56:36 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/24 02:51:11 by hax              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	minint(char *s, int *n)
+static void	minint(char *s, int *n)
 {
 	if (*n == -2147483648)
 	{
@@ -21,7 +21,7 @@ void	minint(char *s, int *n)
 	}
 }
 
-int	nlen(int n)
+static int	nlen(int n)
 {
 	int	len;
 
