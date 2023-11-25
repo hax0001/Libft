@@ -6,7 +6,7 @@
 /*   By: hax <hax@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:25:04 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/25 05:31:14 by hax              ###   ########.fr       */
+/*   Updated: 2023/11/25 05:49:49 by hax              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	if (!src)
-		return (NULL);
 	while (dst[i] && i < size)
 		i++;
 	while (src[j] && (i + j + 1) < size)
@@ -30,5 +28,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	if (i < size)
 		dst[i + j] = '\0';
-	return (i + ft_strlen(src));
+	j = 0;
+	while (src)
+		j++;
+	return (i + j);
 }
