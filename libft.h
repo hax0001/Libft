@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 18:05:14 by prossi            #+#    #+#             */
-/*   Updated: 2023/11/23 02:37:51 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/26 20:08:02 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
+# include <stddef.h>
 
 typedef struct s_list
 {
