@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 08:52:19 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/20 02:26:25 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/26 21:28:28 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		if (d > s)
 			while (t-- > 0)
-				d[t] = (char)s[t];
+				d[t] = s[t];
 		else
 		{
 			while (i < n)
