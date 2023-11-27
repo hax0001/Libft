@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hax <hax@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 02:11:46 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/25 05:33:22 by hax              ###   ########.fr       */
+/*   Updated: 2023/11/27 20:00:58 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1)
 		return (NULL);
+	else if (!set)
+		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	i = 0;
 	j = s1_len;
