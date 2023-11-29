@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:25:04 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/27 22:56:43 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/29 17:43:38 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	j = 0;
 	s = 0;
+	if (!dst && size == 0)
+		return (ft_strlen(src));
 	while (dst[i] && i < size)
 		i++;
 	while (src[j] && (i + j + 1) < size)
