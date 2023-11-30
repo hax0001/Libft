@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 08:52:19 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/26 21:28:28 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/30 17:29:17 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*d;
-	const char	*s;
+	unsigned char		*d;
+	const unsigned char	*s;
 	size_t		i;
 	size_t		t;
 
-	d = (char *)dest;
-	s = (const char *)src;
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
 	i = 0;
 	t = n;
 	if (dest != src)
