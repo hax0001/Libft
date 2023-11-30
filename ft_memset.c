@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 17:06:39 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/30 17:30:01 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/30 17:49:41 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*v;
-	size_t	i;
+	size_t			i;
 
 	i = 0;
 	v = (unsigned char *)s;
