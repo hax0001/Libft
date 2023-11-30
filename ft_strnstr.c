@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 19:41:02 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/11/29 18:45:03 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/11/30 15:31:56 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	j = 0;
 	i = 0;
-	if (*little == '\0' || len == 0)
+	if (*little == '\0')
 		return ((char *)big);
 	while (big[i] != '\0' && len != 0 && i < len)
 	{
